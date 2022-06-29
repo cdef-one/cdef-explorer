@@ -57,7 +57,7 @@ export function clusterName(cluster: Cluster): string {
 }
 
 export const MAINNET_BETA_URL = clusterApiUrl("mainnet-beta");
-export const TESTNET_URL = clusterApiUrl("testnet");
+export const TESTNET_URL = "http://api.testnet.cdef.one";
 export const DEVNET_URL = clusterApiUrl("devnet");
 
 export function clusterUrl(cluster: Cluster, customUrl: string): string {
@@ -67,7 +67,7 @@ export function clusterUrl(cluster: Cluster, customUrl: string): string {
     case Cluster.MainnetBeta:
       return MAINNET_BETA_URL.replace("api", "explorer-api");
     case Cluster.Testnet:
-      return TESTNET_URL.replace("api", "explorer-api");
+      return TESTNET_URL;
     case Cluster.Custom:
       return customUrl;
   }
