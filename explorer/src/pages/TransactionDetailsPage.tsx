@@ -216,13 +216,17 @@ function StatusCard({
     <div className="card">
       <div className="card-header align-items-center">
         <h3 className="card-header-title">Overview</h3>
-        <Link
+        {/* <Link
           to={clusterPath(`/tx/${signature}/inspect`)}
           className="btn btn-white btn-sm me-2"
         >
           <span className="fe fe-settings me-2"></span>
           Inspect
-        </Link>
+        </Link> */}
+        <button disabled className="btn btn-white btn-sm me-2">
+          <span className="fe fe-settings me-2"></span>
+          Inspect(disabled)
+        </button>
         {autoRefresh === AutoRefresh.Active ? (
           <span className="spinner-grow spinner-grow-sm"></span>
         ) : (
