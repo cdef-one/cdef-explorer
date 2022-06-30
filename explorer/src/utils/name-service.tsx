@@ -20,7 +20,7 @@ export interface DomainInfo {
   address: PublicKey;
 }
 export const hasDomainSyntax = (value: string) => {
-  return value.length > 4 && value.substring(value.length - 4) === ".sol";
+  return value.length > 4 && value.substring(value.length - 4) === ".cdef";
 };
 
 async function getDomainKey(
@@ -37,10 +37,10 @@ async function getDomainKey(
   return nameKey;
 }
 
-// returns non empty wallet string if a given .sol domain is owned by a wallet
+// returns non empty wallet string if a given .cdef domain is owned by a wallet
 export async function getDomainInfo(domain: string, connection: Connection) {
   const domainKey = await getDomainKey(
-    domain.slice(0, -4), // remove .sol
+    domain.slice(0, -5), // remove .cdef
     undefined,
     SOL_TLD_AUTHORITY
   );
@@ -107,7 +107,7 @@ export const useUserDomains = (
           userDomainAddresses.map(async (address) => {
             const domainName = await performReverseLookup(connection, address);
             return {
-              name: `${domainName}.sol`,
+              name: `${domainName}.cdef`,
               address,
             };
           })
