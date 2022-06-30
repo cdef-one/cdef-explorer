@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "img/logos-solana/dark-explorer-logo.svg";
 import { clusterPath } from "utils/url";
 import { Link, NavLink } from "react-router-dom";
 import { ClusterStatusButton } from "components/ClusterStatusButton";
@@ -13,7 +12,6 @@ export function Navbar() {
       <div className="container">
         <Link to={clusterPath("/")}>
           <span>CDEF EXPLORER</span>
-          {/* <img src={Logo} width="250" alt="Solana Explorer" /> */}
         </Link>
 
         <button
