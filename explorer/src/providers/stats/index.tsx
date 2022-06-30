@@ -6,7 +6,9 @@ type Props = { children: React.ReactNode };
 export function StatsProvider({ children }: Props) {
   return (
     <SolanaClusterStatsProvider>
-      <SolanaPingProvider>{children}</SolanaPingProvider>
+      {/* <SolanaPingProvider> */}
+      {children}
+      {/* </SolanaPingProvider> */}
     </SolanaClusterStatsProvider>
   );
 }

@@ -24,7 +24,7 @@ const CLUSTER_STATS_TIMEOUT = 5000;
 export function ClusterStatsPage() {
   return (
     <div className="container mt-4">
-      <StakingComponent />
+      {/* <StakingComponent /> */}
       <div className="card">
         <div className="card-header">
           <div className="row align-items-center">
@@ -35,7 +35,7 @@ export function ClusterStatsPage() {
         </div>
         <StatsCardBody />
       </div>
-      <LiveTransactionStatsCard />
+      {/* <LiveTransactionStatsCard /> */}
     </div>
   );
 }
