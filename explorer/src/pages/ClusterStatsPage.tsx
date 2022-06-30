@@ -35,7 +35,7 @@ export function ClusterStatsPage() {
         </div>
         <StatsCardBody />
       </div>
-      {/* <LiveTransactionStatsCard /> */}
+      <LiveTransactionStatsCard />
     </div>
   );
 }
