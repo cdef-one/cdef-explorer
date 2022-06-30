@@ -14,19 +14,19 @@ export function FlaggedAccountsProvider({ children }: ProviderProps) {
     new Map()
   );
 
-  React.useEffect(() => {
-    fetch(FLAGGED_REGISTRY)
-      .then((res) => {
-        return res.text();
-      })
-      .then((body: string) => {
-        const flaggedAccounts = new Map<string, boolean>();
-        body
-          .split("\n")
-          .forEach((account) => flaggedAccounts.set(account, true));
-        setFlaggedAccounts(flaggedAccounts);
-      });
-  }, []);
+  // React.useEffect(() => {
+  //   fetch(FLAGGED_REGISTRY)
+  //     .then((res) => {
+  //       return res.text();
+  //     })
+  //     .then((body: string) => {
+  //       const flaggedAccounts = new Map<string, boolean>();
+  //       body
+  //         .split("\n")
+  //         .forEach((account) => flaggedAccounts.set(account, true));
+  //       setFlaggedAccounts(flaggedAccounts);
+  //     });
+  // }, []);
 
   return (
     <FlaggedContext.Provider value={flaggedAccounts}>
