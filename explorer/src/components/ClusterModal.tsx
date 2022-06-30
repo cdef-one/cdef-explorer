@@ -179,15 +179,28 @@ function ClusterToggle() {
           };
         };
 
-        return (
-          <Link
-            key={index}
-            className={`btn col-12 mb-3 ${btnClass}`}
-            to={clusterLocation}
-          >
-            {clusterName(net)}
-          </Link>
-        );
+        if (net === 0 || net === 2) {
+          return (
+            <button
+              key={index}
+              className={`btn col-12 mb-3 ${btnClass}`}
+              // to={clusterLocation}
+              disabled
+            >
+              {clusterName(net)}
+            </button>
+          );
+        } else {
+          return (
+            <Link
+              key={index}
+              className={`btn col-12 mb-3 ${btnClass}`}
+              to={clusterLocation}
+            >
+              {clusterName(net)}
+            </Link>
+          );
+        }
       })}
     </div>
   );
