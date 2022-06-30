@@ -28,9 +28,9 @@ function App() {
         <ClusterStatusBanner />
         <SearchBar />
         <Switch>
-          <Route exact path={["/supply", "/accounts", "accounts/top"]}>
+          {/* <Route exact path={["/supply", "/accounts", "accounts/top"]}>
             <SupplyPage />
-          </Route>
+          </Route> */}
           <Route
             exact
             path={TX_ALIASES.map((tx) => `/${tx}/:signature`)}
@@ -39,13 +39,13 @@ function App() {
               return <Redirect to={{ ...location, pathname }} />;
             }}
           />
-          <Route
+          {/* <Route
             exact
             path={["/tx/inspector", "/tx/:signature/inspect"]}
             render={({ match }) => (
               <TransactionInspectorPage signature={match.params.signature} />
             )}
-          />
+          /> */}
           <Route
             exact
             path={"/tx/:signature"}

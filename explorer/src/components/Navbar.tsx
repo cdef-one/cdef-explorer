@@ -33,7 +33,7 @@ export function Navbar() {
                 Cluster Stats
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink className="nav-link" to={clusterPath("/supply")}>
                 Supply
               </NavLink>
@@ -42,7 +42,7 @@ export function Navbar() {
               <NavLink className="nav-link" to={clusterPath("/tx/inspector")}>
                 Inspector
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
 
